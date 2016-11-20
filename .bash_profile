@@ -37,7 +37,7 @@ source ~/.profile
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/bin/"
     export PATH="$PATH:/usr/local/bin/"
-    export PATH="~/.composer/vendor/bin/:$PATH"
+    export PATH="$HOME/.composer/vendor/bin/:$PATH"
     export PATH="$PATH:$HOME/.yarn/bin"
 
 #   Set Default Editor (change 'sublime' to the editor of your choice)
