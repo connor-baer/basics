@@ -69,9 +69,9 @@ alias gd='gulp dist'                                # Shortcut for 'gulp dist'
 
 #   MAMP Variables
 #   ------------------------------------------------------
-alias php='/Applications/MAMP/bin/php/php7.0.10/bin/php'
-alias pear='/Applications/MAMP/bin/php/php7.0.10/bin/pear'
-alias pecl='/Applications/MAMP/bin/php/php7.0.10/bin/pecl'
+alias php='/Applications/MAMP/bin/php/php7.0.12/bin/php'
+alias pear='/Applications/MAMP/bin/php/php7.0.12/bin/pear'
+alias pecl='/Applications/MAMP/bin/php/php7.0.12/bin/pecl'
 
 #   Project Variables
 #   ------------------------------------------------------
