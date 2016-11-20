@@ -1,13 +1,12 @@
 // ==== THEME ==== //
 
-var gulp        = require('gulp')
-  , gutil       = require('gulp-util')
-  , phpcbf      = require('gulp-phpcbf')
-  , wppot       = require('gulp-wp-pot')
-  , sort        = require('gulp-sort')
-  , plugins     = require('gulp-load-plugins')({ camelize: true })
-  , config      = require('../../gulpconfig').theme
-;
+var gulp        = require('gulp'),
+    gutil       = require('gulp-util'),
+    phpcbf      = require('gulp-phpcbf'),
+    wppot       = require('gulp-wp-pot'),
+    sort        = require('gulp-sort'),
+    plugins     = require('gulp-load-plugins')({ camelize: true }),
+    config      = require('../../gulpconfig').theme;
 
 // Copy Advanced Custom Fields PRO files to the `build` folder
 gulp.task('theme-acf', function() {
@@ -34,9 +33,9 @@ gulp.task('theme-fonts', function() {
 gulp.task('theme-php', function () {
   return gulp.src(config.php.src)
   .pipe(phpcbf({
-    bin: config.php.bin
-  , standard: config.php.standard
-  , warningSeverity: config.php.warningSeverity
+    bin: config.php.bin,
+    standard: config.php.standard,
+    warningSeverity: config.php.warningSeverity
   }))
   .on('error', gutil.log)
   .pipe(gulp.dest(config.php.dest));

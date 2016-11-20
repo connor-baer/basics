@@ -51,7 +51,7 @@ module.exports = {
 
   scripts: {
     bundles: { // Bundles are defined by a name and an array of chunks (below) to concatenate; warning: this method offers no dependency management!
-      scripts: [ 'accessibility', 'navigation', 'lightbox', 'core', 'google_maps' ],
+      scripts: [ 'accessibility', 'navigation', 'lightbox', 'core', 'googleMaps' ],
       html5: [ 'ie' ],
       customizer: [ 'customizer' ]
     },
@@ -78,7 +78,7 @@ module.exports = {
       customizer: [
         src + 'js/customizer.js'
       ],
-      google_maps: [
+      googleMaps: [
         src + 'js/google-maps.js'
       ]
     },
