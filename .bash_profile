@@ -37,8 +37,11 @@ source ~/.profile
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/bin/"
     export PATH="$PATH:/usr/local/bin/"
-    export PATH="$HOME/.composer/vendor/bin/:$PATH"
+    export PATH="$PATH:$HOME/.composer/vendor/bin"
     export PATH="$PATH:$HOME/.yarn/bin"
+    export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+    export PATH="$HOME/.rvm/gems/ruby-2.3.0/bin:$PATH"
+    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 #   Set Default Editor (change 'sublime' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -62,10 +65,12 @@ alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias edit='subl'                           # edit:   Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:      Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:      Go Home
-alias gh='cd /Users/connorbaer/Development/GitHub'  # Go to 'GitHub' directory
-alias g='gulp'                                      # Shortcut for 'gulp'
-alias gs='gulp setup'                               # Shortcut for 'gulp setup'
-alias gd='gulp dist'                                # Shortcut for 'gulp dist'
+alias ghb='cd /Users/connorbaer/Development/GitHub'              # Go to 'GitHub' directory
+alias mbc='cd /Users/connorbaer/Development/GitHub/madebyconnor' # Go to 'GitHub' directory
+alias uwc='cd /Users/connorbaer/Development/GitHub/uwc'          # Go to 'GitHub' directory
+alias gu='gulp'                                                   # Shortcut for 'gulp'
+alias gs='gulp setup'                                            # Shortcut for 'gulp setup'
+alias gd='gulp dist'                                             # Shortcut for 'gulp dist'
 
 #   MAMP Variables
 #   ------------------------------------------------------
