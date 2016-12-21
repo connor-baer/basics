@@ -4,41 +4,22 @@ var gulp  = require('gulp'),
   plugins = require('gulp-load-plugins')({ camelize: true }),
   config  = require('../../gulpconfig').images;
 
+gulp.task('images', ['image-resize']);
 
-// Resize and optimize images to 1600*640.
-gulp.task('images', function() {
-  return gulp.src(config.dist.src)
-  .pipe(plugins.imagemin(config.dist.imagemin))
-  .pipe(gulp.dest(config.dist.dest));
+// Optimize and resize images.
+gulp.task('image-resize', function () {
+  return gulp.src(config.resize.src)
+    .pipe(plugins.responsive(config.resize.responsive, {
+      errorOnUnusedImage: false,
+      silent: true
+    }))
+    .pipe(gulp.dest(config.resize.dest));
 });
 
-
-// Resize and optimize images in the `dist` folder (slow)
-// gulp.task('images', ['images-large', 'images-small']);
-
-// Resize and optimize images to 1600*640.
-gulp.task('images-large', function() {
-  return gulp.src(config.dist.src)
-  .pipe(plugins.imageResize({
-      width : 1600,
-      height : 640,
-      crop : true
-    }))
-  .pipe(plugins.imagemin(config.dist.imagemin))
-  .pipe(gulp.dest(config.dist.dest));
-});
-
-// Resize and optimize images to 640*360.
-gulp.task('images-small', function() {
-  return gulp.src(config.dist.src)
-  .pipe(plugins.imageResize({
-      width : 640,
-      height : 360,
-      crop : true
-    }))
-  .pipe(plugins.imagemin(config.dist.imagemin))
-  .pipe(plugins.rename({
-    suffix: '-thumb'
-  }))
-  .pipe(gulp.dest(config.dist.dest));
+// Generate icons.
+gulp.task('image-icons', function () {
+  return gulp.src(config.icons.src)
+    .pipe(plugins.favicons(config.icons.favicons))
+    .on('error', plugins.util.log)
+    .pipe(gulp.dest(config.icons.dest));
 });
