@@ -153,11 +153,12 @@ module.exports = {
       dest: src + assets + 'images/',
     },
     icons: {
-      src: [src + '_images/favicons/*(*.png|*.jpg|*.jpeg)'],
+      src: [src + '_images/icons/*(*.png|*.jpg|*.jpeg)'],
       favicons: {
         appName: meta.name,
         appDescription: meta.description,
         developerName: meta.author,
+        background: '#f9423a',
         path: src + assets + 'icons/',
         url: meta.homepage,
         display: 'standalone',
@@ -167,7 +168,20 @@ module.exports = {
         logging: false,
         online: false,
         replace: true,
+        html: src + '_includes/core/icons.html',
+        pipeHTML: true,
+        icons: {
+          android: true,              // Create Android homescreen icon. `boolean`
+          appleIcon: true,            // Create Apple touch icons. `boolean` or `{ offset: offsetInPercentage }`
+          appleStartup: false,         // Create Apple startup images. `boolean`
+          coast: { offset: 15 },      // Create Opera Coast icon with offset 25%. `boolean` or `{ offset: offsetInPercentage }`
+          favicons: true,             // Create regular favicons. `boolean`
+          firefox: true,              // Create Firefox OS icons. `boolean` or `{ offset: offsetInPercentage }`
+          windows: true,              // Create Windows 8 tile icons. `boolean`
+          yandex: false                // Create Yandex browser icon. `boolean`
+        },
       },
+      destHtml: src,
       dest: src + assets + 'icons/',
     },
   },

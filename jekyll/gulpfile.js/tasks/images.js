@@ -18,8 +18,14 @@ gulp.task('image-resize', function () {
 
 // Generate icons.
 gulp.task('image-icons', function () {
+  var htmlFilter = plugins.filter(config.icons.favicons.html, {restore: true});
+  var iconsFilter = plugins.filter(['*', '!' + config.icons.favicons.html], {restore: true});
+
   return gulp.src(config.icons.src)
     .pipe(plugins.favicons(config.icons.favicons))
-    .on('error', plugins.util.log)
+    .pipe(htmlFilter)
+    .pipe(gulp.dest(config.icons.destHtml))
+    .pipe(htmlFilter.restore)
+    .pipe(iconsFilter)
     .pipe(gulp.dest(config.icons.dest));
 });
