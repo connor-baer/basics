@@ -1,9 +1,8 @@
 {
-  "preset": "airbnb",
+  "preset": "wordpress",
   "fileExtensions": [".js"],
   "excludeFiles": [
-    "assets/",
-    "_site/"
+    "js/**.min.js"
   ],
   "requireVarDeclFirst": false
 }
