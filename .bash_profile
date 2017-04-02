@@ -1,5 +1,3 @@
-source ~/.profile
-
 #  ---------------------------------------------------------------------------
 #
 #  Description:  This file holds all my BASH configurations and aliases.
@@ -39,20 +37,16 @@ source ~/.profile
 #   Search command history using the up and down arrow keys.
 #    Pasting this code might not work. If so, replace ^[[A/^[[B by pressing Escape-V to enter Verbatim Input mode. Then press the Up Arrow (or Down Arrow, depending on the line).
 
-    bind '"^[[A":history-search-backward'
-    bind '"^[[B":history-search-forward'
+    bind '"[A":history-search-backward'
+    bind '"[B":history-search-forward'
 
 #   Set Paths
 #   ------------------------------------------------------------
     export PATH="$PATH:/usr/bin/"
     export PATH="$PATH:/usr/local/bin/"
-    export PATH="$PATH:$HOME/.composer/vendor/bin"
+    # export PATH="$PATH:$HOME/.composer/vendor/bin"
     export PATH="$PATH:$HOME/.yarn/bin"
-    export PATH="$PATH:/Applications/MAMP/Library/bin"
-    export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
-    export PATH="$HOME/.rvm/gems/ruby-2.3.0/bin:$PATH"
-    export DYLD_LIBRARY_PATH=`/usr/local/cuda/lib`:$DYLD_LIBRARY_PATH
-    [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#    export DYLD_LIBRARY_PATH=`/usr/local/cuda/lib`:$DYLD_LIBRARY_PATH
 
 #   Set Default Editor (change 'sublime' to the editor of your choice)
 #   ------------------------------------------------------------
@@ -63,7 +57,6 @@ source ~/.profile
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
-eval "$(thefuck --alias fuck)"              # Fix previous command
 cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
 
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
@@ -76,25 +69,18 @@ alias .6='cd ../../../../../../'            # Go back 6 directory levels
 alias edit='subl'                           # edit:   Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:      Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:      Go Home
-alias ghb='cd /Users/connorbaer/Development/GitHub'              # Go to 'GitHub' directory
-alias lcl='cd /Users/connorbaer/Development/Localhost'           # Go to 'Localhost' directory
-alias mbc='cd /Users/connorbaer/Development/GitHub/madebyconnor' # Go to 'GitHub/madebyconnor' subdirectory
-alias uwc='cd /Users/connorbaer/Development/GitHub/uwc'          # Go to 'GitHub/uwc' subdirectory
+alias ghb='cd /Users/connorbaer/Developer/GitHub'              # Go to 'GitHub' directory
+alias lcl='cd /Users/connorbaer/Developer/Localhost'           # Go to 'Localhost' directory
+alias mbc='cd /Users/connorbaer/Developer/GitHub/madebyconnor' # Go to 'GitHub/madebyconnor' subdirectory
+alias uwc='cd /Users/connorbaer/Developer/GitHub/uwc'          # Go to 'GitHub/uwc' subdirectory
 alias gu='gulp'                                                  # Shortcut for 'gulp'
 alias gs='gulp setup'                                            # Shortcut for 'gulp setup'
 alias gd='gulp dist'                                             # Shortcut for 'gulp dist'
 
-#   MAMP Variables
-#   ------------------------------------------------------
-alias php='/Applications/MAMP/bin/php/php7.0.12/bin/php'
-alias pear='/Applications/MAMP/bin/php/php7.0.12/bin/pear'
-alias pecl='/Applications/MAMP/bin/php/php7.0.12/bin/pecl'
-
 #   Project Variables
 #   ------------------------------------------------------
     alias uwcwk='ssh principal@46.101.203.64'           # Access Waterford's server
-    alias uwcde='ssh connor_baer@91.90.146.160'         # Access UWC Deutschland's server
-    alias connorbaer='ssh connorbaer@46.101.210.217'    # Access my personal server
+    alias clients1='ssh root@46.101.68.85'              # Access clients1 server
 
 
 #   -------------------------------
