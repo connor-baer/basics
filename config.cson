@@ -1,0 +1,72 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "ca467759-8a7d-4a4e-840e-0cb7d501f5af"
+      analytics: false
+    js:
+      beautify_on_save: true
+      end_with_comma: true
+      end_with_newline: true
+      indent_size: 2
+      jslint_happy: true
+      keep_array_indentation: true
+      keep_function_indentation: true
+      space_after_anon_function: true
+      space_in_paren: true
+    json:
+      beautify_on_save: true
+    markdown:
+      beautify_on_save: true
+    php: {}
+    python:
+      beautify_on_save: true
+    scss:
+      beautify_on_save: true
+      default_beautifier: "CSScomb"
+    vue:
+      beautify_on_save: true
+  core:
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "text.html.twig": [
+        "html"
+      ]
+    disabledPackages: [
+      "about"
+      "background-tips"
+      "command-palette"
+      "deprecation-cop"
+      "dev-live-reload"
+      "encoding-selector"
+      "go-to-line"
+      "keybinding-resolver"
+      "metrics"
+      "package-generator"
+      "timecop"
+      "welcome"
+    ]
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/connorbaer/Developer/GitHub"
+    telemetryConsent: "no"
+  "dark-mode":
+    ambientLight: true
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "SFMono-Light"
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "761841fa-ef3d-454f-aa82-9d2be34f0b1a"
+  "file-icons": {}
+  "linter-sass-lint":
+    configFile: "/Users/connorbaer/Developer/GitHub/basics/.scss-lint.yml"
+  "linter-scss-lint": {}
+  "linter-ui-default":
+    showPanel: true
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
+  "wakatime-hidden":
+    lastInit: 1492198869
+  welcome:
+    showOnStartup: false
