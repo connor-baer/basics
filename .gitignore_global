@@ -1,11 +1,14 @@
-# Install by running `bower install`
-bower_components/
+# Dependencies #
+################
 
-# Install by running `npm install`
+# Install by running `npm install` or `yarn install`
 node_modules/
 
-# Install by running `./composer.phar update`
+# Install by running `composer update`
 vendor/
+
+# Install by running `bower install`
+bower_components/
 
 # Compiled source #
 ###################
@@ -29,7 +32,8 @@ vendor/
 *.tar
 *.zip
 
-# Text editor files
+# Editor files #
+################
 *.sublime-workspace
 *.sublime-project
 
