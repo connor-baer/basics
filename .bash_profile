@@ -66,16 +66,14 @@ alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
-alias edit='subl'                           # edit:   Opens any file in sublime editor
+alias edit='atom'                           # edit:   Opens any file in sublime editor
 alias f='open -a Finder ./'                 # f:      Opens current directory in MacOS Finder
 alias ~="cd ~"                              # ~:      Go Home
-alias ghb='cd /Users/connorbaer/Developer/GitHub'              # Go to 'GitHub' directory
-alias lcl='cd /Users/connorbaer/Developer/Localhost'           # Go to 'Localhost' directory
-alias mbc='cd /Users/connorbaer/Developer/GitHub/madebyconnor' # Go to 'GitHub/madebyconnor' subdirectory
-alias uwc='cd /Users/connorbaer/Developer/GitHub/uwc'          # Go to 'GitHub/uwc' subdirectory
-alias gu='gulp'                                                  # Shortcut for 'gulp'
-alias gs='gulp setup'                                            # Shortcut for 'gulp setup'
-alias gd='gulp dist'                                             # Shortcut for 'gulp dist'
+alias ghb='cd ~/Developer/GitHub'           # Go to 'GitHub' directory
+alias lcl='cd ~/Developer/Localhost'        # Go to 'Localhost' directory
+alias gu='gulp'                             # Shortcut for 'gulp'
+alias gs='gulp setup'                       # Shortcut for 'gulp setup'
+alias gd='gulp dist'                        # Shortcut for 'gulp dist'
 
 #   Project Variables
 #   ------------------------------------------------------
@@ -144,4 +142,4 @@ alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out th
     alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
 
 # added by Anaconda3 4.3.0 installer
-export PATH="/Users/connorbaer/anaconda/bin:$PATH"
+export PATH="~/anaconda/bin:$PATH"
