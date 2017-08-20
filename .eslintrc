@@ -1,3 +1,21 @@
 {
-  "extends": "airbnb"
+  'extends': 'airbnb',
+  'rules': {
+    'arrow-parens': ['error', 'as-needed'],
+    'comma-dangle': ['error', 'never'],
+    'no-use-before-define': ['error', { functions: false }],
+    'no-underscore-dangle': 'off',
+    'no-param-reassign': 'off',
+    'import/prefer-default-export': 'off',
+    'max-len': [
+      2,
+      80,
+      {
+        ignoreComments: true,
+        tabWidth: 2
+      }
+    ],
+    quotes: ['warn', 'single', 'avoid-escape'],
+    'space-before-function-paren': ['error', 'never']
+  }
 }
