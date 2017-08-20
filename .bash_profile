@@ -19,9 +19,17 @@
 
 #   Get the Git branch
 #   ------------------------------------------------------------
-    parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    function parse_git_dirty {
+      [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
     }
+
+    function parse_git_branch {
+      git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* (.*)/[1$(parse_git_dirty)]/"
+    }
+
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+      . $(brew --prefix)/etc/bash_completion
+    fi
 
 #   Custom Bash Prompt
 #   ------------------------------------------------------------
@@ -71,9 +79,8 @@ alias f='open -a Finder ./'                 # f:    Opens current directory in F
 alias ~="cd ~"                              # ~:    Go Home
 alias ghb='cd ~/Developer/GitHub'           # Go to 'GitHub' directory
 alias lcl='cd ~/Developer/Localhost'        # Go to 'Localhost' directory
-alias gu='gulp'                             # Shortcut for 'gulp'
-alias gs='gulp setup'                       # Shortcut for 'gulp setup'
-alias gd='gulp dist'                        # Shortcut for 'gulp dist'
+alias gs='git status'                       # Shortcut for 'git status'
+alias gl='git log -10 -oneline'             # Shortcut for a readable 'git log'
 
 
 #   -------------------------------
